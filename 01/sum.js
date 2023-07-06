@@ -17,3 +17,5 @@ function sum(number) {
 
     return innerFunction;
 }
+
+module.exports = sum;

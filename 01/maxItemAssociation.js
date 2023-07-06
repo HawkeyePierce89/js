@@ -35,3 +35,5 @@ function maxItemAssociation(array) {
 
     return Array.from(longestRecommendationGroup);
 }
+
+module.exports = maxItemAssociation;
