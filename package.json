@@ -1,0 +1,15 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/HawkeyePierce89/js",
+  "author": "Anton Karmanov <anton@karmanov.ws>",
+  "license": "UNLICENSED",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^29.6.1"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
