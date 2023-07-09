@@ -26,14 +26,31 @@ function maxItemAssociation(array) {
         }
     }
 
-    // sorting by alphabet
-    recommendationGroups = recommendationGroups.map(item => new Set(Array.from(item).sort()));
+    let longestRecommendationGroups = recommendationGroups.reduce((acc, item) => {
+        if (item.size > acc[0].size) {
+            acc = [item];
+        }
 
-    const longestRecommendationGroup = recommendationGroups.reduce((acc, item) =>
-        acc.size > item.size ? acc : item, []
-    );
+        if (item.size === acc[0].size) {
+            acc.push(item);
+        }
 
-    return Array.from(longestRecommendationGroup);
+        return acc;
+    }, [new Set()]);
+
+    return longestRecommendationGroups.reduce((acc, item, index) => {
+        const sortedRecommendationGroup = Array.from(item).sort();
+
+        if (index === 0) {
+            return sortedRecommendationGroup;
+        }
+
+        if (sortedRecommendationGroup[0] < acc[0]) {
+            return sortedRecommendationGroup;
+        }
+
+        return acc;
+    }, []);
 }
 
 module.exports = maxItemAssociation;

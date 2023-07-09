@@ -10,5 +10,17 @@ describe('maxItemAssociation', () => {
             ["q", "e"],
             ["q", "r"],
         ])).toEqual(["a", "b", "c", "e", "q", "r", "w"]);
+        expect(maxItemAssociation([
+            ["q", "w"],
+            ["z", "w"],
+            ["a", "b"],
+            ["a", "c"],
+        ])).toEqual(["a", "b", "c"]);
+        expect(maxItemAssociation([
+            ["a", "b"],
+            ["a", "c"],
+            ["q", "w"],
+            ["z", "w"],
+        ])).toEqual(["a", "b", "c"]);
     });
 });
