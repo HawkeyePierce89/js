@@ -7,11 +7,13 @@
   "license": "UNLICENSED",
   "dependencies": {},
   "devDependencies": {
+    "execa": "^8.0.1",
     "jest": "^29.6.1",
     "jest-environment-jsdom": "^29.6.1",
     "jsdom": "^22.1.0"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "tree": "node ./07/tree.js"
   }
 }
