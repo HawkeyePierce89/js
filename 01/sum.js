@@ -1,21 +1,21 @@
 function sum(number) {
-    let result = 0;
+  let result = 0;
 
-    function innerFunction(number) {
-        if (typeof number === 'undefined') {
-            return result;
-        }
-
-        result += number;
-
-        return innerFunction;
+  function innerFunction(number) {
+    if (typeof number === 'undefined') {
+      return result;
     }
 
-    if (!result) {
-        result = number;
-    }
+    result += number;
 
     return innerFunction;
+  }
+
+  if (!result) {
+    result = number;
+  }
+
+  return innerFunction;
 }
 
 module.exports = sum;
