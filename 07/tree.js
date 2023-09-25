@@ -36,7 +36,7 @@ async function listFilesAndDirs(rootPath) {
 
 if (process.argv[2]) {
   listFilesAndDirs(process.argv[2])
-    .then(result => console.log(result))
+    .then(result => console.log(JSON.stringify(result)))
     .catch(err => console.error(err));
 } else {
   module.exports = listFilesAndDirs;
